@@ -1,8 +1,7 @@
 
 #dependencies
 /node_modules
-bundle.js
-npm-debug.log
+package-lock.json
 
 #environment
 .env
