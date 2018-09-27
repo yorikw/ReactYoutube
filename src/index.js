@@ -6,7 +6,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
-const API_KEY = 'YOUR API KEY GOES HERE';
+const API_KEY_YT = process.env.REACT_APP_API_KEY_YT;
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({ key: API_KEY, term: term }, videos => {
+    YTSearch({ key: API_KEY_YT, term: term }, videos => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
