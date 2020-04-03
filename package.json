@@ -31,6 +31,6 @@
     "react-redux": "7.2.0",
     "redux": "4.0.5",
     "youtube-api-search": "0.0.5",
-    "mocha": 7.1.1
+    "mocha": "7.1.1"
   }
 }
