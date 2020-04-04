@@ -17,7 +17,6 @@ env:
   AZURE_WEBAPP_NAME: 'ReactYoutube'    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
-  #REACT_APP_API_KEY_YT: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }} 
 
 jobs:
   add-env:
@@ -30,8 +29,7 @@ jobs:
       #env:
       #  REACT_APP_API_KEY_YT: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }}
       run: |
-        echo '${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}'
-        echo 'REACT_APP_API_KEY_YT=${{ secrets.GOOGLE_YOUTUBE_API_KEY }}' >> .env
+        echo 'REACT_APP_API_KEY_YT="${{ secrets.GOOGLE_YOUTUBE_API_KEY }}"' >> .env
         cat .env
   build-and-deploy:
     name: Build and Deploy
