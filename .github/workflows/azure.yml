@@ -23,12 +23,12 @@ jobs:
     name: Add Environment
     runs-on: ubuntu-latest
     steps:
+    - name: Adding Variable
       env:
-        - name: Adding Variable
-          KEY: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }}
+        KEY: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }}
       run: |
-        echo $REACT_APP_API_KEY_YT
-        echo 'REACT_APP_API_KEY_YT=$REACT_APP_API_KEY_YT' >> .env
+        echo $KEY
+        echo 'REACT_APP_API_KEY_YT=$KEY' >> .env
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
