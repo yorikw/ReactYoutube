@@ -5,3 +5,5 @@ package-lock.json
 
 #environment
 .env
+.vscode
+.github
