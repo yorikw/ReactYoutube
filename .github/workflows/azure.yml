@@ -26,11 +26,10 @@ jobs:
     steps:
     - name: Adding Variable
       shell: bash
-      env:
-        REACT_APP_API_KEY_YT: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }}
+      #env:
+      #  REACT_APP_API_KEY_YT: ${{ secrets.GOOGLE_YOUTUBE_API_KEY }}
       run: |
-        echo 'REACT_APP_API_KEY_YT=$REACT_APP_API_KEY_YT' >> .env
-        echo $PATH 
+        echo 'REACT_APP_API_KEY_YT=${{ secrets.GOOGLE_YOUTUBE_API_KEY }}' >> .env
         cat .env
   build-and-deploy:
     name: Build and Deploy
